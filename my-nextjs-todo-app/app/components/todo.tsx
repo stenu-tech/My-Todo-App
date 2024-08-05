@@ -1,7 +1,7 @@
 "use client" // This is to avoid the file being bundled by the server
 
 import React, { useState } from 'react';
-import { ErrorBoundary } from 'react-error-boundary';
+// import { ErrorBoundary } from 'react-error-boundary';
 
 interface TodoItem {
     id: number;
@@ -9,7 +9,7 @@ interface TodoItem {
     checked: boolean;
 }
 
-const ErrorFallback: React.FC<{ error: Error, resetErrorBoundary: () => void }> = ({ error, resetErrorBoundary }) => {
+/* const ErrorFallback: React.FC<{ error: Error, resetErrorBoundary: () => void }> = ({ error, resetErrorBoundary }) => {
     return (
         <div>
             <h2>Something went wrong</h2>
@@ -18,6 +18,8 @@ const ErrorFallback: React.FC<{ error: Error, resetErrorBoundary: () => void }> 
         </div>
     );
 };
+
+*/
 
 const Todo: React.FC = () => {
     const [todoItems, setTodoItems] = useState<TodoItem[]>([]);
